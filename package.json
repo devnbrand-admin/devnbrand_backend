@@ -2,7 +2,7 @@
   "name": "devNBrand",
   "version": "1.1.0",
   "main": "index.js",
-  "type": "module",
+  
   "repository": "https://github.com/devNbrand/devNbramd_backend.git",
   "scripts": {
     "dev": "nodemon index.js",
