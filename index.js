@@ -10,13 +10,13 @@ const app = express();
 const port = process.env.PORT || 3300;
 const mongo = process.env.MONGO_URI;
 const corsOptions = { origin: "*", optionsSuccessStatus: 200 };
-const blogRouter = require("./routes/blogRoute");
+const videoRouter = require("./routes/videoRoute");
 app.use(compress());
 app.use(morgan("dev"));
 app.use(express.json());
 app.use(cors(corsOptions));
 app.use(express.urlencoded({ extended: true }));
-app.use("/api/v1",blogRouter);
+app.use("/api/v1",videoRouter);
 app.get('/', (req, res) => res.send({ message: "This is docNbrand server!" }));
 
 app.listen(port, () => {
