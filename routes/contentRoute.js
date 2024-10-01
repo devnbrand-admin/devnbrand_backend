@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const adminContentController = require('../controllers/adminContentController');
+
 const { createContent, getAllContent, getContentById, updateContent, deleteContent } = require('../controllers/ContentController');
 
 // Routes for CRUD operations

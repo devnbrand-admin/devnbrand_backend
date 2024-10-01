@@ -1,4 +1,4 @@
-const AdminContent = require('../models/adminContentModel');
+const AdminContent = require('../models/adminContent');
 
 // Create a new content (POST)
 exports.createContent = async (req, res) => {
