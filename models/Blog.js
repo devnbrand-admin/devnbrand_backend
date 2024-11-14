@@ -8,6 +8,13 @@ const blogSchema = new mongoose.Schema({
     minlength: 5,
     maxlength: 100,
   },
+  subtitle:{
+    type: String,
+    minlength: 10,
+  },
+  category:{
+    type: String,
+  },
   content: {
     type: String,
     required: true,
