@@ -17,7 +17,12 @@ const contactRoute = require("./routes/contact");
 app.use(compress());
 app.use(morgan("dev"));
 app.use(express.json());
-app.use(cors(corsOptions));
+app.use(
+	cors({
+	  origin: "http://localhost:5173",
+	  credentials: true, // allow credentials
+	})
+  );
 app.use(express.urlencoded({ extended: true }));
 app.use("/api/v1/video",videoRouter);
 app.use("/api/v1/auth", authRoutes);
