@@ -4,40 +4,32 @@ const mongoose = require('mongoose');
 
 const contactSchema = new mongoose.Schema({
   date: {
-    type: Date,
-    required: true
+    type: Date
   },
   time_allotment: {
-    type: String,
-    required: true
+    type: String
   },
   scheduled_time: {
-    type: String,
-    required: true
+    type: String
   },
   fullname: {
     type: String,
-    required: true,
     trim: true
   },
   email: {
     type: String,
-    required: true,
     trim: true,
     match: [/.+@.+\..+/, 'Please enter a valid email address']
   },
   phone_no: {
     type: String,
-    required: true,
     match: [/^\d{10}$/, 'Please enter a valid 10-digit phone number']
   },
   budget: {
-    type: Number,
-    required: true
+    type: Number
   },
   message: {
-    type: String,
-    required: true
+    type: String
   },
   createdAt: {
     type: Date,
